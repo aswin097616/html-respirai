@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Disease Classification - About Us</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and apply rounded corners -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#1e3a8a',
+                        'secondary-light': '#f3f4f6',
+                        'accent-teal': '#14b8a6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS embedded here (Consistent style across all files) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .hero {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .floating-logo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 9999px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floating-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Style for the fixed header */
+        .site-top {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        /* Active Nav Link Style */
+        .nav-link.active {
+            color: #14b8a6;
+            border-bottom: 2px solid #14b8a6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header/Navigation -->
+    <header class="site-top bg-primary-dark text-white p-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="text-2xl font-display font-bold tracking-tight mb-2 md:mb-0">
+                RespirAI
+            </div>
+            <nav>
+                <ul class="flex space-x-4 text-sm font-medium">
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="index.html">Home</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="disease.html">Disease Info</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="model.html">Model Details</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="prevention.html">Prevention</a></li>
+                    <li><a class="nav-link p-2 transition duration-200 active" href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+        <img src="https://placehold.co/1920x300/e0e7ff/4338ca?text=Meet+the+RespirAI+Team" 
+             onerror="this.onerror=null;this.src='https://placehold.co/1920x300/e0e7ff/4338ca?text=Meet+the+RespirAI+Team';"
+             alt="Image of a diverse team working on medical technology" class="hero">
+    </section>
+
+    <!-- Main Content Area: About Us -->
+    <main class="flex-grow max-w-4xl mx-auto p-6 lg:p-10">
+        <div class="content-box bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                Our Mission and History
+            </h2>
+            <p class="text-gray-600 mb-8">
+                RespirAI was founded on the principle that cutting-edge AI can make diagnostic tools more accessible, faster, and less invasive for respiratory health. We believe that non-invasive 'digital auscultation' combined with deep learning offers a powerful path to early detection.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-accent-teal">The Leadership</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-4 bg-secondary-light rounded-lg shadow-md">
+                    <img src="https://placehold.co/100x100/1e3a8a/ffffff?text=AM" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=JM';" 
+                         alt="Team member profile" class="w-24 h-24 rounded-full mx-auto mb-3">
+                    <strong class="text-gray-900 block">Anurag M Kumar</strong>
+                    <span class="text-sm text-accent-teal">Student</span>
+                </div>
+                <div class="text-center p-4 bg-secondary-light rounded-lg shadow-md">
+                    <img src="https://placehold.co/100x100/1e3a8a/ffffff?text=AK" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AS';" 
+                         alt="Team member profile" class="w-24 h-24 rounded-full mx-auto mb-3">
+                    <strong class="text-gray-900 block">Aswin K</strong>
+                    <span class="text-sm text-accent-teal">Student</span>
+                </div>
+                <div class="text-center p-4 bg-secondary-light rounded-lg shadow-md">
+                    <img src="https://placehold.co/100x100/1e3a8a/ffffff?text=JV" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AS';" 
+                         alt="Team member profile" class="w-24 h-24 rounded-full mx-auto mb-3">
+                    <strong class="text-gray-900 block">Jeevan V</strong>
+                    <span class="text-sm text-accent-teal">Student</span>
+                </div>
+                <div class="text-center p-4 bg-secondary-light rounded-lg shadow-md">
+                    <img src="https://placehold.co/100x100/1e3a8a/ffffff?text=KR" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AS';" 
+                         alt="Team member profile" class="w-24 h-24 rounded-full mx-auto mb-3">
+                    <strong class="text-gray-900 block">Keerthi Raveendran</strong>
+                    <span class="text-sm text-accent-teal">Student</span>
+                </div>
+                <div class="text-center p-4 bg-secondary-light rounded-lg shadow-md">
+                    <img src="https://placehold.co/100x100/1e3a8a/ffffff?text=RU" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=LR';" 
+                         alt="Team member profile" class="w-24 h-24 rounded-full mx-auto mb-3">
+                    <strong class="text-gray-900 block">Rathul U</strong>
+                    <span class="text-sm text-accent-teal">Student</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Floating Logo/Icon -->
+    <div class="floating-logo">
+        <img src="https://placehold.co/80x80/1e3a8a/ffffff?text=AI" 
+             onerror="this.onerror=null;this.src='https://placehold.co/80x80/1e3a8a/ffffff?text=AI';" 
+             alt="AI model logo">
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 bg-gray-900 text-gray-300 p-8 pt-10 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold font-display text-accent-teal">RespirAI</h3>
+                <p class="text-sm">Advancing non-invasive diagnostics for respiratory health through sound analysis and artificial intelligence.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">🌐</a>
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">✉️</a>
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">🔬</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-xs text-gray-500">
+            &copy; 2025 RespirAI Solutions. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

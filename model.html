@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Disease Classification - Model Details</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and apply rounded corners -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#1e3a8a',
+                        'secondary-light': '#f3f4f6',
+                        'accent-teal': '#14b8a6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS embedded here (Consistent style across all files) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .hero {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .floating-logo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 9999px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floating-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Style for the fixed header */
+        .site-top {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        /* Active Nav Link Style */
+        .nav-link.active {
+            color: #14b8a6;
+            border-bottom: 2px solid #14b8a6;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header/Navigation -->
+    <header class="site-top bg-primary-dark text-white p-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="text-2xl font-display font-bold tracking-tight mb-2 md:mb-0">
+                RespirAI
+            </div>
+            <nav>
+                <ul class="flex space-x-4 text-sm font-medium">
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="index.html">Home</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="disease.html">Disease Info</a></li>
+                    <li><a class="nav-link p-2 transition duration-200 active" href="model.html">Model Details</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="prevention.html">Prevention</a></li>
+                    <li><a class="nav-link p-2 hover:text-accent-teal transition duration-200" href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+        <img src="https://placehold.co/1920x300/e0f7fa/00838f?text=AI+Model+Architecture" 
+             onerror="this.onerror=null;this.src='https://placehold.co/1920x300/e0f7fa/00838f?text=AI+Model+Architecture';"
+             alt="Diagram of a neural network processing sound waves" class="hero">
+    </section>
+
+    <!-- Main Content Area: Model Details -->
+    <main class="flex-grow max-w-4xl mx-auto p-6 lg:p-10">
+        <div class="content-box bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">
+                The RespirAI Classification Model
+            </h2>
+            <p class="text-gray-600 mb-8">
+                Our core technology is a sophisticated deep learning framework designed specifically for audio biometrics. The model processes the raw audio data through three main stages to deliver an accurate classification.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-accent-teal">1. Preprocessing and Feature Extraction</h3>
+            <div class="space-y-4 mb-8">
+                <div class="p-4 bg-secondary-light rounded-lg border-l-4 border-accent-teal">
+                    <strong class="text-gray-900 block">Spectrogram Conversion:</strong> Each segment is converted into a 'Mel-Spectrogram'. This visual representation of the sound's frequency over time is used as the primary input image for the neural network. 
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-accent-teal">2. Machine Learning Model</h3>
+            <div class="space-y-4 mb-8">
+                <div class="p-4 bg-secondary-light rounded-lg border-l-4 border-primary-dark">
+                    <strong class="text-gray-900 block">Convolutional Neural Networks (CNN):</strong> The CNN layer analyzes the 2D spectrogram image, acting as a powerful feature extractor to identify localized patterns like the distinct shape of a wheeze or a crackle.
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Floating Logo/Icon -->
+    <div class="floating-logo">
+        <img src="https://placehold.co/80x80/1e3a8a/ffffff?text=AI" 
+             onerror="this.onerror=null;this.src='https://placehold.co/80x80/1e3a8a/ffffff?text=AI';" 
+             alt="AI model logo">
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 bg-gray-900 text-gray-300 p-8 pt-10 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold font-display text-accent-teal">RespirAI</h3>
+                <p class="text-sm">Advancing non-invasive diagnostics for respiratory health through sound analysis and artificial intelligence.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">🌐</a>
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">✉️</a>
+                    <a href="#" class="hover:text-white transition duration-200 text-lg">🔬</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-xs text-gray-500">
+            &copy; 2025 RespirAI Solutions. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
